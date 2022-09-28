@@ -1,9 +1,9 @@
-"""Setup file for installing dependencies for mibilib.
+"""Setup file for installing dependencies for icb-client.
 Copyright (C) 2022 Ionpath, Inc.  All rights reserved."""
 
 from setuptools import setup
 
-setup(name='mibilib',
+setup(name='icb-client',
       author='IONpath, Inc.',
       author_email='support@ionpath.com',
       version='1.7.0',
@@ -12,8 +12,8 @@ setup(name='mibilib',
       license='MIT',
       python_requires='>=3.6.8',
       install_requires=[
-        'requests==2.21.0',
-        'rx==1.6.1'
-        'websocket-client==0.54.0'
+        'requests>=2.21.0',
+        'rx>=1.6.1',
+        'websocket-client>=0.54.0',
       ]
      )
