@@ -15,5 +15,6 @@ setup(name='icb-client',
         'requests>=2.21.0',
         'rx>=1.6.1',
         'websocket-client>=0.54.0',
-      ]
+      ],
+      packages=['icb']
      )
