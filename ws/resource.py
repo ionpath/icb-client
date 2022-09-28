@@ -1,5 +1,5 @@
-import icb
-import api
+import ws.icb
+import ws.api
 from rx.subjects import Subject
 
 class Resource(object):
@@ -24,11 +24,11 @@ class Resource(object):
         return self.messageSubject.first().subscribe(fn)
 
     def _on_icb_state(self, state):
-        if state == icb.STATE_CONNECTED:
+        if state == ws.icb.STATE_CONNECTED:
             self._request_subscribe()
 
     def _on_icb_message(self, message):
-        msg = api.parse_message(message)
+        msg = ws.api.parse_message(message)
         if msg['noun'] == self.noun:
             self.messageSubject.on_next(msg)
 

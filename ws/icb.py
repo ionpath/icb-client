@@ -4,7 +4,7 @@ import threading
 import websocket
 from rx.subjects import ReplaySubject
 
-import api
+import ws.api
 from resource import Resource
 
 STATE_CONNECTED = 0
@@ -40,7 +40,7 @@ class ICB(object):
         self.ws.close()
 
     def send(self, verb, noun, body):
-        message = api.create_message(verb, noun, body)
+        message = ws.api.create_message(verb, noun, body)
         self.stateSubject.first().subscribe(on_next=lambda state: self._send_safe(state, message))
 
     def _on_message(self, ws, message):
