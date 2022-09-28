@@ -10,7 +10,7 @@ setup(name='mibilib',
       url='https://github.com/ionpath/icb-client',
       description='Python helper for controlling MIBIScope using websockets and RESTful APIs',
       license='MIT',
-      python_requires='~=3.7.3',
+      python_requires='>=3.6.8',
       install_requires=[
         'requests==2.21.0',
         'rx==1.6.1'
