@@ -5,7 +5,7 @@ import websocket
 from rx.subjects import ReplaySubject
 
 import ws.api
-from resource import Resource
+from ws.resource import Resource
 
 STATE_CONNECTED = 0
 STATE_ERROR = 1
