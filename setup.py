@@ -12,9 +12,9 @@ setup(name='icb-client',
       license='MIT',
       python_requires='>=3.6.8',
       install_requires=[
-        'requests>=2.21.0',
-        'rx>=1.6.1',
-        'websocket-client>=0.54.0',
+        'requests==2.21.0',
+        'rx==1.6.1',
+        'websocket-client==0.54.0',
       ],
-      packages=['icb']
+      packages=['ws']
      )
