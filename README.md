@@ -43,20 +43,15 @@ gascontrol_subscription = icb \
 # give ICB some time to open DAC, in real code it should be guarded by getting real HV state
 time.sleep(2)
 
-# set Lens1 to 100.5
-icb.get_resource('/hv-dac').put({'hvChannel': {'name': 'Lens1', 'value': 100.5, 'channel': 15}})
-
 # power HV off later
 time.sleep(10)
 hv_state_resource.put({'state': 'POWER_OFF'})
 
 # save attached tiff image 
-url = 'http://localhost:9099/api/convenience/sed'
+url = 'http://localhost:9099/api/runs'
 r = requests.get(url, stream=True)
 if r.status_code == 200:
-    with open('sed_image.tiff', 'wb') as f:
-        r.raw.decode_content = True
-        shutil.copyfileobj(r.raw, f) 
+    print(r)
 
 # unsubscribe (if you really need it for some reason)
 state_subscription.dispose()
