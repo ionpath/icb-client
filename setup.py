@@ -16,6 +16,5 @@ setup(name='icb-client',
         'rx==1.6.1',
         'websocket-client==0.54.0',
       ],
-      packages=['ws'],
-      packages=['mibi_control']
+      packages=['ws', 'mibi_control']
      )
