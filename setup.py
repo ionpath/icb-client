@@ -6,7 +6,7 @@ from setuptools import setup
 setup(name='icb-client',
       author='IONpath, Inc.',
       author_email='support@ionpath.com',
-      version='1.7.0',
+      version='1.7.1',
       url='https://github.com/ionpath/icb-client',
       description='Python helper for controlling MIBIScope using websockets and RESTful APIs',
       license='MIT',
@@ -16,5 +16,6 @@ setup(name='icb-client',
         'rx==1.6.1',
         'websocket-client==0.54.0',
       ],
-      packages=['ws']
+      packages=['ws'],
+      packages=['mibi_control']
      )
